@@ -1,0 +1,26 @@
+Verification performed for this delivery
+
+All main and test Java sources compiled successfully using the available
+OpenJDK 21 compiler module with Java 17 source/target settings.
+
+BattleLogicTest: PASS, 35 checks.
+DatabaseTest: PASS, 22 checks using an in-memory JDBC test driver, including
+Hall of Fame retrieval, pagination, names, order, timestamps and read-only behavior.
+The additional checks verify hardcoded account settings, a nonempty supplied
+password, and the retained connection timeout; no credentials are logged.
+
+All 12 player front sprites decoded successfully in the existing image checks.
+All uploaded images are included in the package.
+Arceus.java, ArceusEnemy.java, BattleLogic.java and schema.sql match the type-
+effectiveness archive byte-for-byte. Battle rules have not been changed.
+Pokemon.java adds the Hall of Fame menu button. BattleUI.java opens it after saving.
+Database.java now embeds the connection method supplied in PokeBase.java.
+PokeBase.java is not included: it was a standalone method and not a valid class.
+Database.main() is provided for a live connection test on the user's computer.
+
+Not verified in this environment:
+- Interactive Swing window appearance or gameplay on a desktop display.
+- Live MySQL server/schema execution, Connector/J download, or real credentials.
+- Full Maven build (Maven is not installed; Java compilation was performed directly).
+
+See README.md for build instructions, MySQL setup and test commands.
