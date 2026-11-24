@@ -1,4 +1,4 @@
-# Simplekemon (Pokémon Gauntlet)
+# Simplekémon
 
 A single-player Java Swing turn-based desktop battle game backed by a MySQL database. Players draft an ordered team of six Pokémon from a 12-species catalog and challenge a sequential four-stage Elite Four gauntlet (Lorelei, Bruno, Agatha, and Lance). Completed runs are saved to MySQL and displayed in a persistent Hall of Fame leaderboard.
 
@@ -7,14 +7,14 @@ A single-player Java Swing turn-based desktop battle game backed by a MySQL data
 * **JDK Version 17 or newer**
 * **Apache NetBeans 32** (for integrated Maven/build support)
 * **MySQL Server** running locally or at a reachable host
-* **Simplekémon.zip** extracted to a clean project folder
 
 ## Database Setup
 
-1. Start **MySQL Server** and open your MySQL client (or terminal at the extracted project root).
-2. Run `schema.sql` with an administrative account (`mysql -u root -p < schema.sql` or execute it directly inside your MySQL client connection).
-3. Run `testuser.sql` (or execute its SQL statements) to create `'pokemon_app'@'localhost'` with `SELECT` and `INSERT` permissions on `pokemon_gauntlet.*`.
-4. Check `Database.connect()` in `Database.java` to confirm `url` (`jdbc:mysql://localhost:3306/pokemon_gauntlet`), `username` (`pokemon_app`), and `password` (`pikamon`) match your MySQL account.
+1. Obtain the project from the GitHub repository (`https://github.com/Haazn/Simplekemon-v1.0.git`) by cloning it (via Git or Apache NetBeans), downloading it as a ZIP archive from GitHub and extracting it to a clean folder, or copying the repository files locally, then open the project in **Apache NetBeans**
+2. Start **MySQL Server** and open your MySQL client (or terminal at the extracted project root).
+3. Run `schema.sql` with an administrative account (`mysql -u root -p < schema.sql` or execute it directly inside your MySQL client connection).
+4. Run `testuser.sql` (or execute its SQL statements) to create `'pokemon_app'@'localhost'` with `SELECT` and `INSERT` permissions on `pokemon_gauntlet.*`.
+5. Check `Database.connect()` in `Database.java` to confirm `url` (`jdbc:mysql://localhost:3306/pokemon_gauntlet`), `username` (`pokemon_app`), and `password` (`pikamon`) match your MySQL account.
 
 ## Build and Run (Apache NetBeans)
 
